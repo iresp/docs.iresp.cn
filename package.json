@@ -10,6 +10,7 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
+    "build": "yarn install && yarn docs:build",
     "docs:build": "vuepress build docs"
   }
 }
