@@ -29,3 +29,7 @@ lang: zh-CN
 ## 资源下载
 
 - 宣传页：[iRESP-PPT.pdf](./iRESP-PPT.pdf)
+
+## 联系方式
+
+- Email: [service@iresp.cn](mailto:service@iresp.cn)
