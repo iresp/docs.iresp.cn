@@ -12,8 +12,10 @@ module.exports = {
   },
   themeConfig: {
     repo: 'iresp/docs.iresp.cn',
+    docsDir: 'docs',
     lastUpdated:'上次更新',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
+    search: false,
   },
 }
