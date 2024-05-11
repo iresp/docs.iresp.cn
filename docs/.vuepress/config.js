@@ -13,9 +13,36 @@ module.exports = {
   themeConfig: {
     repo: 'iresp/docs.iresp.cn',
     docsDir: 'docs',
-    lastUpdated:'上次更新',
+    lastUpdated: '上次更新',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     search: false,
+    displayAllHeaders: true,
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '开发', link: '/dev/' },
+      { text: '运维', link: '/ops/' },
+      { text: '官网', link: 'https://www.ipresp.cn/' },
+    ],
+    sidebar: [
+      {
+        title: '开发手册',
+        path: '/dev/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/dev/'
+        ]
+      },
+      {
+        title: '运维手册',
+        path: '/ops/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/ops/'
+        ]
+      },
+    ],
   },
 }
