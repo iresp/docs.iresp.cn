@@ -31,7 +31,15 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/dev/'
+          {
+            title: '设备说明',
+            path: '/dev/devices/',
+            collapsable: false,
+            sidebarDepth: 1,
+            children: [
+              '/dev/devices/workstation'
+            ]
+          },
         ]
       },
       {
