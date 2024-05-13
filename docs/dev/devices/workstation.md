@@ -18,7 +18,7 @@
 | 架构   | x86_64                            | 2    |
 | 主板   | HUANANZHI X99-F8D PLUS            | 1    |
 | CPU    | Intel Xeon E5-2660 v3             | 2    |
-| 内存   | KINGBANK DDR4 3200 16G            | 2    |
+| 内存   | KINGBANK DDR4 3200 16G            | 4    |
 | GPU    | NVIDIA GeForce RTX 2080Ti 22G     | 2    |
 | 硬盘   | SAMSUNG NVMe PCIe3.0*4 980 1TB    | 1    |
 | 硬盘   | WD40EZAX 4TB                      | 1    |
