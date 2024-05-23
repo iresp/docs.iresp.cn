@@ -40,6 +40,12 @@ module.exports = {
               '/dev/devices/workstation'
             ]
           },
+          {
+            title: '前端开发',
+            path: '/dev/frontend/',
+            collapsable: false,
+            sidebarDepth: 1,
+          },
         ]
       },
       {
