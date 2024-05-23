@@ -52,6 +52,12 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
           },
+          {
+            title: '移动端开发',
+            path: '/dev/app/',
+            collapsable: false,
+            sidebarDepth: 1,
+          },
         ]
       },
       {
