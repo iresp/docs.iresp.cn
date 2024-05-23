@@ -37,6 +37,7 @@ module.exports = {
             collapsable: false,
             sidebarDepth: 1,
             children: [
+              '/dev/devices/ecs',
               '/dev/devices/workstation'
             ]
           },
