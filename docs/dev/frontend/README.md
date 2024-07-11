@@ -145,6 +145,6 @@ VITE_GLOB_DOMAIN_URL=http://localhost:8080/iresp
 
 ::: tip
 
-- 只有以 VITE_  开头的变量会被嵌入到客户端侧的包中，你可以项目代码中这样访问它们：```console.log(import.meta.env.VITE_PROT);```
-- 以 VITE_GLOB_* 开头的的变量，在打包的时候，会被加入_app.config.js配置文件当中.
+- 注意表名，不能忘写或者写错;
+- 可以用请假功能页面作为参考.
   :::
