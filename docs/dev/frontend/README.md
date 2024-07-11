@@ -78,3 +78,73 @@ VITE_GLOB_DOMAIN_URL=http://localhost:8080/iresp
 | 生产环境                         | .env.production  |
 | 测试环境                         | .env.test        |
 
+
+
+## 常见开发问题
+
+### 1. 编辑、详情页面增加评论功能
+
+![image-20240711145158163](/image-20240711145158163.png)
+
+代码段，Modal.vue：
+
+```javascript
+<template>
+  <a-modal 
+      width="100%"
+      wrap-class-name="full-modal" :title="title" :visible="visible" @ok="handleOk" :okButtonProps="{ class: { 'jee-hidden': disableSubmit } }" @cancel="handleCancel" cancelText="关闭">
+
+    <a-row>
+      
+      <a-col :span="17"><BidProjectRequestForm ref="registerForm" @ok="submitCallback" :formDisabled="disableSubmit" :formBpm="false"></BidProjectRequestForm></a-col>
+      <a-col :span="7"><CommentPanel :data-id="dataid" table-name="bid_project_request"/></a-col>
+    </a-row>
+  </a-modal>
+</template>
+
+<script lang="ts" setup>
+  import { ref, nextTick, defineExpose } from 'vue';
+  import BidProjectRequestForm from './BidProjectRequestForm.vue'
+  //引入评论区组件
+  import CommentPanel from '/@/components/jeecg/comment/CommentPanel.vue' 
+  //定义数据id
+  const dataid = ref('');
+
+.......
+
+  /**
+   * 编辑
+   * @param record
+   */
+  function edit(record) {
+    //为数据id赋值
+    dataid.value = record.id
+    title.value = disableSubmit.value ? '详情' : '编辑';
+    visible.value = true;
+    nextTick(() => {
+      registerForm.value.edit(record);
+    });
+  }
+  
+  
+```
+
+
+
+最后，检查Form.vue中的CSS部分，确认高度是否合适。
+
+```css
+<style lang="less" scoped>
+  .antd-modal-form {
+    height: 100% !important;
+    overflow-y: auto;
+    padding: 14px;
+  }
+</style>
+```
+
+::: tip
+
+- 只有以 VITE_  开头的变量会被嵌入到客户端侧的包中，你可以项目代码中这样访问它们：```console.log(import.meta.env.VITE_PROT);```
+- 以 VITE_GLOB_* 开头的的变量，在打包的时候，会被加入_app.config.js配置文件当中.
+  :::
