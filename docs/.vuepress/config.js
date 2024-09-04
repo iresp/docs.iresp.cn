@@ -46,6 +46,9 @@ module.exports = {
             path: '/dev/backend/',
             collapsable: false,
             sidebarDepth: 1,
+            children: [
+              '/dev/backend/CAS',
+            ]
           },
           {
             title: '前端开发',
