@@ -59,6 +59,22 @@ cas.tgc.crypto.signing.key=1XRP_Yj-AuNHiRkdvrcy7UHd4Fq9HuM-78Q1u0RFWA4dmqm5ZjIkh
 cas.tgc.crypto.encryption.key=GfqnJPOkz9GbL_vFOyB-RdltShiw9zYMlQ7KFOhJN74
 cas.webflow.crypto.signing.key=CMzbXzvZLAnRDbImcIK8xbI_ykvQkBwq-N3Orn_juM2pmM2FGctWTArrPtYF8CvTFqsWlSYQ_Cx-u4gMUkVg1Q
 cas.webflow.crypto.encryption.key=DPrQ4b1Uy_coO5c9n80e5A
+cas.service-registry.json.location=classpath:/services
+```
+
+#### 服务注册
+
+在 ```src/main/resources/services``` 中新建一个JSON文件```iRESP-10000001.json```：
+
+```json
+{
+  "@class": "org.apereo.cas.services.CasRegisteredService",
+  "serviceId": "^(https|imaps|http)://.*",
+  "name": "iRESP",
+  "description": "Intelligent Reliable Easy Stable Project",
+  "id": 10000001,
+  "evaluationOrder": 10
+}
 ```
 
 #### 生成 Keystore
@@ -73,11 +89,15 @@ gradle createKeystore
 
 ### 构建
 
-编辑项目中的 ```build.gradle``` 文件，添加依赖 ```implementation "org.apereo.cas:cas-server-support-ldap"``` :
+编辑项目中的 ```build.gradle``` 文件，添加依赖：
+
+ - ```implementation "org.apereo.cas:cas-server-support-ldap"```
+ - ```implementation "org.apereo.cas:cas-server-support-json-service-registry"```
 
 ```gradle
 dependencies {
     implementation "org.apereo.cas:cas-server-support-ldap"
+    implementation "org.apereo.cas:cas-server-support-json-service-registry"
 }
 ```
 
