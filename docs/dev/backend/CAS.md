@@ -61,6 +61,16 @@ cas.webflow.crypto.signing.key=CMzbXzvZLAnRDbImcIK8xbI_ykvQkBwq-N3Orn_juM2pmM2FG
 cas.webflow.crypto.encryption.key=DPrQ4b1Uy_coO5c9n80e5A
 ```
 
+#### 生成 Keystore
+
+这个 key 仅用于开发测试使用，生产环境需要部署可信的证书。
+
+```shell
+gradle createKeystore
+```
+
+生成证书的密码是：```changeit```
+
 ### 构建
 
 编辑项目中的 ```build.gradle``` 文件，添加依赖 ```implementation "org.apereo.cas:cas-server-support-ldap"``` :
