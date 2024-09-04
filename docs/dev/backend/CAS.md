@@ -60,6 +60,8 @@ cas.tgc.crypto.encryption.key=GfqnJPOkz9GbL_vFOyB-RdltShiw9zYMlQ7KFOhJN74
 cas.webflow.crypto.signing.key=CMzbXzvZLAnRDbImcIK8xbI_ykvQkBwq-N3Orn_juM2pmM2FGctWTArrPtYF8CvTFqsWlSYQ_Cx-u4gMUkVg1Q
 cas.webflow.crypto.encryption.key=DPrQ4b1Uy_coO5c9n80e5A
 cas.service-registry.json.location=classpath:/services
+cas.logout.redirect-parameter=url
+cas.logout.follow-service-redirects=true
 ```
 
 #### 服务注册
@@ -114,3 +116,17 @@ gradle clean build
 ```shell
 java -jar build/libs/cas.war
 ```
+
+### 修改与定制
+
+官方参考文档：[https://apereo.github.io/cas/7.0.x/ux/User-Interface-Customization.html](https://apereo.github.io/cas/7.0.x/ux/User-Interface-Customization.html)
+
+如果你需要定制 CAS 的页面内容，可进行以下修改：
+
+- 新建目录：```src/main/resources/templates```
+- 在 [CAS](https://github.com/apereo/cas/tree/master/support/cas-server-support-thymeleaf/src/main/resources/templates) 源码中寻找对应的页面
+- 将找到的页面复制到 [github.com/apereo/cas-overlay-template](https://github.com/apereo/cas-overlay-template) 项目中的 ```src/main/resources/templates``` 目录进行修改
+
+#### 案例
+
+例如，我们要修改登录页面，在 CAS 源代码中找到了 [https://github.com/apereo/cas/blob/master/support/cas-server-support-thymeleaf/src/main/resources/templates/login/casLoginView.html](https://github.com/apereo/cas/blob/master/support/cas-server-support-thymeleaf/src/main/resources/templates/login/casLoginView.html)，复制我们自己的 ```src/main/resources/templates/login/casLoginView.html```目录中进行修改定制。
