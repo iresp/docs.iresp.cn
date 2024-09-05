@@ -130,3 +130,9 @@ java -jar build/libs/cas.war
 ### 案例
 
 例如，我们要修改登录页面，在 CAS 源代码中找到了 [https://github.com/apereo/cas/blob/master/support/cas-server-support-thymeleaf/src/main/resources/templates/login/casLoginView.html](https://github.com/apereo/cas/blob/master/support/cas-server-support-thymeleaf/src/main/resources/templates/login/casLoginView.html)，复制我们自己的 ```src/main/resources/templates/login/casLoginView.html```目录中进行修改定制。
+
+## 注意
+
+- ldap://192.168.0.180:389，389为普通端口，636为SSL端口。389为只读权限，SSL端口则可以读写。一般用户验证只需要读权限就可以，但如果需要修改AD用户密码的话，就需要SSL端口的写权限
+- 本方案是用于CAS集成AD域，但除此之外，CAS也可以直接集成ADFS。具体集成方案待研究
+- 目前认为CAS集成AD域所使用的用户应该是管理员权限，但没验证过是否在389端口只读权限下普通用户也可以
