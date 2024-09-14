@@ -198,6 +198,7 @@ rules:
   docker run -d --name shardingsphere \
 -v /home/conf:/opt/shardingsphere-proxy/conf \
 -v /home/shardingsphere/ext-lib:/opt/shardingsphere-proxy/ext-lib \
+-v /etc/localtime:/etc/localtime \
 -e JVM_OPTS="-Djava.awt.headless=true" \
 -e CGROUP_MEM_OPTS="-XX:InitialRAMPercentage=80.0 -XX:MaxRAMPercentage=80.0 -XX:MinRAMPercentage=80.0" \
 -e PORT=3308 \
