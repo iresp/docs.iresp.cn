@@ -22,7 +22,7 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '开发', link: '/dev/' },
       { text: '运维', link: '/ops/' },
-      { text: '官网', link: 'https://www.ipresp.cn/' },
+      { text: '官网', link: 'https://www.iresp.cn/' },
     ],
     sidebar: [
       {
@@ -48,6 +48,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
               '/dev/backend/CAS',
+              '/dev/backend/Sharding',
             ]
           },
           {
