@@ -256,6 +256,7 @@ http://localhost:3100/iresp/HsoclaimtableList
 ## 注意
 
 - 目前测试**5.4.1**版本是成功的，其他版本都不行。
+- ShardingSphere-proxy只支持mysql和postGresql数据库，其他数据库只能用ShardingSphere-jdbc
 - 数据库表的分片字段必须是**BIGINT，数字型**，才可以，字符串类型测试过，不成功
 - 为了保证性能，分片数据库最好在**同一个子网**里
 - 分库分表对于SQL影响比较大，很多复杂的SQL可能都会有问题，真实使用时需要测试每个SQL
