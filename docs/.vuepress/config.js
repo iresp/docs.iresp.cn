@@ -48,6 +48,7 @@ module.exports = {
             sidebarDepth: 1,
             children: [
               '/dev/backend/CAS',
+              '/dev/backend/CAS-ADFS',
               '/dev/backend/kkFileView',
               '/dev/backend/Sharding',
             ]
