@@ -7,6 +7,19 @@
 ### 初始化配置
 
 ```bash
+# 设置阿里云源
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+vim /etc/apt/sources.list
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
 # 更新系统
 apt update
 apt upgrade
@@ -18,6 +31,34 @@ sudo usermod -G sudo renfei
 vim /etc/ssh/sshd_config
 ClientAliveInterval 60
 ClientAliveCountMax 1
+```
+
+#### 固定IP配置
+
+Netplan是最新版 Ubuntu 的默认网络管理工具。Netplan 的配置文件使用 YAML 编写，扩展名为.yaml。
+
+> 注意：要小心配置文件中的空格，因为它们是语法的一部分。如果缩进不对，文件将无法正常读取。
+
+```bash
+# 查看当前网络配置
+ip a
+# 查看上面命令输出的网卡名称，例如：eth0
+cd /etc/netplan
+# 查看文件夹下面的文件名称，并编辑
+ll /etc/netplan
+# 请编辑你的文件，我这里文件名是例子01-network-manager-all.yaml
+vim 01-network-manager-all.yaml
+network:
+ version: 2
+ renderer: NetworkManager
+ ethernets:
+   eth0: #注意这里改成你自己的网卡名
+     dhcp4: no
+     addresses: [172.23.207.254/20]
+     gateway4: 192.168.1.1
+     nameservers:
+         addresses: [8.8.8.8,8.8.8.4]
+sudo netplan apply
 ```
 
 #### 配置密钥登录
