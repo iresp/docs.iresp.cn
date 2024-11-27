@@ -15,13 +15,15 @@ deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe m
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+#deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
 # 更新系统
 apt update
+# 如果签名报错，请执行：
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 apt upgrade
 # 添加用户
 sudo adduser renfei
