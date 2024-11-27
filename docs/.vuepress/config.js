@@ -73,7 +73,17 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/ops/'
+          {
+            title: '服务器运维手册',
+            path: '/ops/server',
+            collapsable: false,
+            sidebarDepth: 1,
+            children: [
+              '/ops/server/docker',
+              '/ops/server/linux',
+              '/ops/server/windows',
+            ]
+          },
         ]
       },
     ],
