@@ -13,7 +13,7 @@ CAS和ADFS集成的配置。参考文档：
 在 ```src/main/resources``` 中新建一个配置文件```application-standalone.properties```。需要注意下面几项的配置：
 
 - identity-provider-url：从ADFS配置中获取
-- identity-provider-identifier：来自于ADFS。注意必须是**http**
+- identity-provider-identifier：来自于ADFS。~~注意必须是**http**。~~```（这里应该是和下面的xml文件里的entityID相对应）```
 - relying-party-identifier：ADFS中添加信赖方依赖。注意协议是webFed，且证书应该是上面配置文档里面提到的生成密钥和证书
 - cas.authn.wsfed[0].cookie.crypto.encryption.key：这个必须是256？512？源码里给的例子的长度不够，下面的长度是够的。
 - signing-certificate-resources：可以直接引用adfs的web地址：https://adfs.iresp.com/federationmetadata/2007-06/federationmetadata.xml，但前提是一定要确认在docker里可以curl到这个地址，如果证书不对，可能就会失败。可以像下面的例子里一样，将此文件写到war包里
