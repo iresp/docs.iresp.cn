@@ -92,6 +92,31 @@ openssl x509 -outform der -in x509.pem -out certificate.crt
  - 信赖方信任标识符类似于这样：urn:iresp:cas2
  - 别忘了最后一步的添加声明规则
 
+### Tomcat和nginx配置
+
+ - 如果是配置CAS在tomcat中运行并经过nginx代理，建议tomcat配置为https，同时nginx也是https，且nginx要配置透传：
+
+   ````shell
+   location / {
+       client_max_body_size 500M;
+       proxy_redirect          off;
+       proxy_set_header Host $http_host;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection "upgrade";
+       proxy_set_header Referer $http_referer;
+       proxy_set_header Cookie $http_cookie;
+       proxy_set_header X-Real-IP $remote_addr;  
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       proxy_set_header X-FORWARDED-HOST $server_addr;  
+       proxy_set_header X-FORWARDED-PORT $server_port;
+       proxy_read_timeout 6000;
+       proxy_connect_timeout 600;
+       proxy_pass   https://localhost:8443/;
+   }
+   ````
+
+   
+
 配置参考文档：
 
 https://jingyan.baidu.com/article/925f8cb8d1b503c0dde0569b.html
