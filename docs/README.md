@@ -2,6 +2,7 @@
 title: iRESP 文档中心
 lang: zh-CN
 ---
+<img src="/iresp_logo.svg" width="250" />
 
 # iRESP 文档中心
 
