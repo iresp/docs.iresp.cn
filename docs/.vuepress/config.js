@@ -21,6 +21,7 @@ module.exports = {
         displayAllHeaders: true,
         nav: [
             {text: '首页', link: '/'},
+            {text: '手册', link: '/user/'},
             {text: '开发', link: '/dev/'},
             {text: '运维', link: '/ops/'},
             {text: '官网', link: 'https://www.iresp.cn/'},
