@@ -83,6 +83,12 @@ module.exports = {
                                             '/user/admin/online/enhanceJs/detailModal',
                                             '/user/admin/online/enhanceJs/systemVariables',
                                         ]
+                                    },
+                                    {
+                                        title: 'SQL增强',
+                                        path: '/user/admin/online/enhanceSql/',
+                                        collapsable: false,
+                                        sidebarDepth: 1,
                                     }
                                 ]
                             }
