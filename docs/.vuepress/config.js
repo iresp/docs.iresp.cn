@@ -38,7 +38,7 @@ module.exports = {
                         sidebarDepth: 1,
                         children: [
                             {
-                                title: 'Online手册',
+                                title: '在线开发手册',
                                 path: '/user/admin/online/',
                                 collapsable: false,
                                 sidebarDepth: 1,
