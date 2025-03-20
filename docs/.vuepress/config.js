@@ -26,6 +26,55 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: '用户手册',
+        path: '/user/',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          {
+            title: '管理员手册',
+            path: '/user/admin/',
+            collapsable: false,
+            sidebarDepth: 1,
+            children: [
+              {
+                title: 'Online手册',
+                path: '/user/admin/online/',
+                collapsable: false,
+                sidebarDepth: 1,
+                children: [
+                  {
+                    title: 'JS增强',
+                    path: '/user/admin/online/enhanceJs/',
+                    collapsable: false,
+                    sidebarDepth: 1,
+                    children: [
+                      {
+                        title: '表单',
+                        path: '/user/admin/online/enhanceJs/form/',
+                        collapsable: false,
+                        sidebarDepth: 0,
+                        children: [
+                          '/user/admin/online/enhanceJs/form/loaded',
+                          '/user/admin/online/enhanceJs/form/beforeSubmit',
+                          '/user/admin/online/enhanceJs/form/onlChange',
+                          '/user/admin/online/enhanceJs/form/subtable',
+                          '/user/admin/online/enhanceJs/form/subchangemain',
+                          '/user/admin/online/enhanceJs/form/fieldHiddenOrFileDisabled',
+                          '/user/admin/online/enhanceJs/form/liandong',
+                          '/user/admin/online/enhanceJs/form/selecttree',
+                          '/user/admin/online/enhanceJs/form/hookSetup',
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         title: '开发手册',
         path: '/dev/',
         collapsable: false,
