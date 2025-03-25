@@ -16,14 +16,14 @@ lang: zh-CN
     - 高层领导
     - 直线经理
     - 企业财务
-    - 系统管理员: [管理员手册](./user/admin/)
+    - 系统管理员: [管理员手册](/user/admin/)
 - iRESP Team Members
     - Market
     - Designer
     - Product Manager
-    - Developer: [开发手册](./dev/)
+    - Developer: [开发手册](/dev/)
     - Tester
-    - Operations: [运维手册](./ops/)
+    - Operations: [运维手册](/ops/)
 - iRESP OpenSource Community
     - Contributor
 
