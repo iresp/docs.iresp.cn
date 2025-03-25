@@ -45,6 +45,7 @@ module.exports = {
                                 collapsable: false,
                                 sidebarDepth: 1,
                                 children: [
+                                    '/user/admin/online/enhance/button',
                                     {
                                         title: 'JS增强',
                                         path: '/user/admin/online/enhance/js/',
