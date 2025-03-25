@@ -31,26 +31,26 @@ module.exports = {
                 title: '用户手册',
                 path: '/user/',
                 collapsable: false,
-                sidebarDepth: 1,
+                sidebarDepth: 0,
                 children: [
                     {
                         title: '管理员手册',
                         path: '/user/admin/',
                         collapsable: false,
-                        sidebarDepth: 1,
+                        sidebarDepth: 0,
                         children: [
                             {
                                 title: '在线开发手册',
                                 path: '/user/admin/online/',
                                 collapsable: false,
-                                sidebarDepth: 1,
+                                sidebarDepth: 0,
                                 children: [
                                     '/user/admin/online/enhance/button',
                                     {
                                         title: 'JS增强',
                                         path: '/user/admin/online/enhance/js/',
                                         collapsable: false,
-                                        sidebarDepth: 1,
+                                        sidebarDepth: 0,
                                         children: [
                                             '/user/admin/online/enhance/js/button',
                                             {
@@ -90,7 +90,7 @@ module.exports = {
                                         title: 'JAVA增强',
                                         path: '/user/admin/online/enhance/java/',
                                         collapsable: false,
-                                        sidebarDepth: 1,
+                                        sidebarDepth: 0,
                                         children: [
                                             '/user/admin/online/enhance/java/import',
                                             '/user/admin/online/enhance/java/export',
@@ -102,7 +102,7 @@ module.exports = {
                                         title: 'SQL增强',
                                         path: '/user/admin/online/enhance/sql/',
                                         collapsable: false,
-                                        sidebarDepth: 1,
+                                        sidebarDepth: 0,
                                     }
                                 ]
                             }
