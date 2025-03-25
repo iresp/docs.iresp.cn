@@ -47,47 +47,47 @@ module.exports = {
                                 children: [
                                     {
                                         title: 'JS增强',
-                                        path: '/user/admin/online/enhanceJs/',
+                                        path: '/user/admin/online/enhance/js/',
                                         collapsable: false,
                                         sidebarDepth: 1,
                                         children: [
-                                            '/user/admin/online/enhanceJs/button',
+                                            '/user/admin/online/enhance/js/button',
                                             {
                                                 title: '列表',
-                                                path: '/user/admin/online/enhanceJs/list/',
+                                                path: '/user/admin/online/enhance/js/list/',
                                                 collapsable: false,
                                                 sidebarDepth: 0,
                                                 children: [
-                                                    '/user/admin/online/enhanceJs/list/listBefore',
+                                                    '/user/admin/online/enhance/js/list/listBefore',
                                                 ]
                                             },
                                             {
                                                 title: '表单',
-                                                path: '/user/admin/online/enhanceJs/form/',
+                                                path: '/user/admin/online/enhance/js/form/',
                                                 collapsable: false,
                                                 sidebarDepth: 0,
                                                 children: [
-                                                    '/user/admin/online/enhanceJs/form/loaded',
-                                                    '/user/admin/online/enhanceJs/form/beforeSubmit',
-                                                    '/user/admin/online/enhanceJs/form/onlChange',
-                                                    '/user/admin/online/enhanceJs/form/subtable',
-                                                    '/user/admin/online/enhanceJs/form/subchangemain',
-                                                    '/user/admin/online/enhanceJs/form/fieldHiddenOrFileDisabled',
-                                                    '/user/admin/online/enhanceJs/form/liandong',
-                                                    '/user/admin/online/enhanceJs/form/selecttree',
-                                                    '/user/admin/online/enhanceJs/form/hookSetup',
-                                                    '/user/admin/online/enhanceJs/form/api',
+                                                    '/user/admin/online/enhance/js/form/loaded',
+                                                    '/user/admin/online/enhance/js/form/beforeSubmit',
+                                                    '/user/admin/online/enhance/js/form/onlChange',
+                                                    '/user/admin/online/enhance/js/form/subtable',
+                                                    '/user/admin/online/enhance/js/form/subchangemain',
+                                                    '/user/admin/online/enhance/js/form/fieldHiddenOrFileDisabled',
+                                                    '/user/admin/online/enhance/js/form/liandong',
+                                                    '/user/admin/online/enhance/js/form/selecttree',
+                                                    '/user/admin/online/enhance/js/form/hookSetup',
+                                                    '/user/admin/online/enhance/js/form/api',
                                                 ]
                                             },
-                                            '/user/admin/online/enhanceJs/pop',
-                                            '/user/admin/online/enhanceJs/http',
-                                            '/user/admin/online/enhanceJs/detailModal',
-                                            '/user/admin/online/enhanceJs/systemVariables',
+                                            '/user/admin/online/enhance/js/pop',
+                                            '/user/admin/online/enhance/js/http',
+                                            '/user/admin/online/enhance/js/detailModal',
+                                            '/user/admin/online/enhance/js/systemVariables',
                                         ]
                                     },
                                     {
                                         title: 'SQL增强',
-                                        path: '/user/admin/online/enhanceSql/',
+                                        path: '/user/admin/online/enhance/sql/',
                                         collapsable: false,
                                         sidebarDepth: 1,
                                     }

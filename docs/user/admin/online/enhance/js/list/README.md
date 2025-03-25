@@ -30,7 +30,7 @@
 | this.clearSelectedRow()  | 清除选中的行                                         |
 | this.getLoadDataParams() | 获取所有的查询条件，返回一个对象，包括：查询表单，高级查询，地址栏参数，分页信息，排序信息等 |
 | this.isTree()            | 判断当前表是不是树，返回布尔值                                |
-| this.openCustomModal()   | 打开一个弹窗-参考 [Js增强打开自定义弹窗](/user/admin/online/enhanceJs/pop)                 |
+| this.openCustomModal()   | 打开一个弹窗-参考 [Js增强打开自定义弹窗](/user/admin/online/enhance/js/pop)                 |
 
 ## 事件
 

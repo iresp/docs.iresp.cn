@@ -16,7 +16,7 @@ lang: zh-CN
     - 高层领导
     - 直线经理
     - 企业财务
-    - 系统管理员: [开发手册](./user/admin/)
+    - 系统管理员: [管理员手册](./user/admin/)
 - iRESP Team Members
     - Market
     - Designer
