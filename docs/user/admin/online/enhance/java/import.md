@@ -1,0 +1,76 @@
+# Java增强 导入
+
+### 功能描述
+
+> online导入数据 可以通过配置 java增强判断 每一条数据是新增还是修改还是丢弃
+
+### 定义java类
+
+```java
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
+import org.jeecg.modules.online.cgform.enhance.CgformEnhanceJavaImportInter;
+import org.jeecg.modules.online.cgform.util.CgformUtil;
+import org.jeecg.modules.online.config.exception.BusinessException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.jeecg.modules.online.cgform.enums.EnhanceDataEnum;
+
+/**
+ * Excel导入增强，针对导入数据进行check或者数据转换
+ */
+@Slf4j
+@Component("cgformEnhanceImportDemo")
+public class CgformEnhanceImportDemo implements CgformEnhanceJavaImportInter{
+
+   /**
+    * 这个testService是自定义的 用于查询数据
+    */
+   @Autowired
+   private TestService testService;
+
+   @Override
+   public EnhanceDataEnum execute(String tableName, JSONObject json) throws BusinessException {
+      // 从json中获取excel里面的数据
+      String name = json.getString("name");
+      if(name==null || "".equals(name)){
+         // 常量值为：0 表示丢弃数据
+         return EnhanceDataEnum.ABANDON;
+      }
+
+      // 拿到excel中的name 去数据库查询
+      Demo demo = testService.getDataByName(name);
+      if(demo!=null){
+         // 假定这个name是demo表的唯一标识，那么如果excel中的name 在数据库中已经存在，则根据excel中的数据走修改逻辑
+         // 修改逻辑需要设置原数据的ID
+         json.put("id", demo.getId());
+         // 常量值为：2 表示需要走修改逻辑
+         return EnhanceDataEnum.UPDATE;
+      }
+
+      // 常量值为：1 表示走新增逻辑
+      return EnhanceDataEnum.INSERT;
+   }
+
+}
+```
+
+### 增强配置
+
+<img src="data:image/png;base64,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">
+
+::: tip
+注：version3.0之后，java增强-导入不需要配置事件状态(开始/结束)，且不支持http-api
+:::
+
+### 导入增强总结
+
+- java类实现接口CgformEnhanceJavaImportInter
+- 重写方法execute
+- 方法返回一个枚举，返回值说明如下：
+
+```java
+// return EnhanceDataEnum.ABANDON = 丢弃
+// return EnhanceDataEnum.INSERT = 新增
+// return EnhanceDataEnum.UPDATE = 修改
+```

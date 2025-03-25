@@ -86,6 +86,18 @@ module.exports = {
                                         ]
                                     },
                                     {
+                                        title: 'JAVA增强',
+                                        path: '/user/admin/online/enhance/java/',
+                                        collapsable: false,
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/user/admin/online/enhance/java/import',
+                                            '/user/admin/online/enhance/java/export',
+                                            '/user/admin/online/enhance/java/query',
+                                            '/user/admin/online/enhance/java/api',
+                                        ]
+                                    },
+                                    {
                                         title: 'SQL增强',
                                         path: '/user/admin/online/enhance/sql/',
                                         collapsable: false,
