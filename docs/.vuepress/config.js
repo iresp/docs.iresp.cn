@@ -47,6 +47,17 @@ module.exports = {
                                 children: [
                                     '/user/admin/online/enhance/button',
                                     {
+                                        title: '在线表单',
+                                        path: '/user/admin/online/form/',
+                                        collapsable: false,
+                                        sidebarDepth: 0,
+                                        children: [
+                                            '/user/admin/online/form/comp/',
+                                            '/user/admin/online/form/comp/rule',
+                                            '/user/admin/online/form/comp/expression',
+                                        ]
+                                    },
+                                    {
                                         title: 'JS增强',
                                         path: '/user/admin/online/enhance/js/',
                                         collapsable: false,
