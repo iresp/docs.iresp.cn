@@ -125,13 +125,13 @@ module.exports = {
                 title: '开发手册',
                 path: '/dev/',
                 collapsable: false,
-                sidebarDepth: 1,
+                sidebarDepth: 0,
                 children: [
                     {
                         title: '设备说明',
                         path: '/dev/devices/',
                         collapsable: false,
-                        sidebarDepth: 1,
+                        sidebarDepth: 0,
                         children: [
                             '/dev/devices/ecs',
                             '/dev/devices/workstation'
@@ -141,7 +141,7 @@ module.exports = {
                         title: '后端开发',
                         path: '/dev/backend/',
                         collapsable: false,
-                        sidebarDepth: 1,
+                        sidebarDepth: 0,
                         children: [
                             '/dev/backend/CAS',
                             '/dev/backend/CAS-ADFS',
@@ -153,13 +153,13 @@ module.exports = {
                         title: '前端开发',
                         path: '/dev/frontend/',
                         collapsable: false,
-                        sidebarDepth: 1,
+                        sidebarDepth: 0,
                     },
                     {
                         title: '移动端开发',
                         path: '/dev/app/',
                         collapsable: false,
-                        sidebarDepth: 1,
+                        sidebarDepth: 0,
                     },
                 ]
             },
@@ -167,13 +167,22 @@ module.exports = {
                 title: '运维手册',
                 path: '/ops/',
                 collapsable: false,
-                sidebarDepth: 1,
+                sidebarDepth: 0,
                 children: [
+                    {
+                        title: '数据库运维手册',
+                        path: '/ops/database',
+                        collapsable: false,
+                        sidebarDepth: 0,
+                        children: [
+                            '/ops/database/dameng',
+                        ]
+                    },
                     {
                         title: '服务器运维手册',
                         path: '/ops/server',
                         collapsable: false,
-                        sidebarDepth: 1,
+                        sidebarDepth: 0,
                         children: [
                             '/ops/server/docker',
                             '/ops/server/linux',
