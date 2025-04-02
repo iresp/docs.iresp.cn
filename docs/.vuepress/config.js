@@ -175,6 +175,7 @@ module.exports = {
                         collapsable: false,
                         sidebarDepth: 0,
                         children: [
+                            '/ops/database/mariadb',
                             '/ops/database/dameng',
                         ]
                     },

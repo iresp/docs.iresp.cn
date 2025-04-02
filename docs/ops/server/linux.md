@@ -7,7 +7,7 @@
 ### 初始化配置
 
 ```bash
-# 设置阿里云源
+# 设置阿里云源（可选：根据不用云厂商进行设置）
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 vim /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
@@ -29,10 +29,89 @@ apt upgrade
 sudo adduser renfei
 # 添加sudo权限
 sudo usermod -G sudo renfei
-# SSH 保持连接
+
 vim /etc/ssh/sshd_config
+# 配置禁止密码登录
+PasswordAuthentication no
+# 禁止 root 远程登录
+PermitRootLogin no
+# 允许 SSH 仅使用密钥认证
+PubkeyAuthentication yes
+# SSH 保持连接
 ClientAliveInterval 60
 ClientAliveCountMax 1
+# 重启 SSH 服务
+systemctl restart ssh
+```
+
+设置密钥，请上传自己的密钥：
+
+```bash
+# 自动设置密钥
+curl -fsSL https://cdn.renfei.net/public/ssh/sshkey.sh | sh
+
+# 手动设置密钥
+mkdir -p ~/.ssh;
+chmod 700 ~/.ssh;
+echo $(curl -s "https://cdn.renfei.net/public/ssh/id_rsa.pub") >> ~/.ssh/authorized_keys;
+chmod 600 ~/.ssh/authorized_keys;
+```
+
+#### 配置 SWAP
+
+```bash
+# 查看当前 Swap 状态
+swapon --show
+free -h
+# 创建 Swap 文件
+dd if=/dev/zero of=/swap bs=1M count=4096
+# 设置权限
+chmod 600 /swap
+
+# 格式化为 Swap 格式
+mkswap /swap
+
+# 启用 Swap
+swapon /swap
+
+# 开机自动挂载 Swap
+vim /etc/fstab
+/swap none swap sw 0 0
+
+# 调整 Swap 相关参数
+# 云服务器磁盘性能较差，建议尽量减少 Swap 使用
+echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.conf
+echo "vm.vfs_cache_pressure=50" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+```
+
+#### 调整最大文件打开数
+
+```bash
+# 允许所有用户无限制文件打开数
+vim /etc/security/limits.conf
+* soft nofile unlimited
+* hard nofile unlimited
+
+# 有些 Ubuntu 版本使用 /etc/security/limits.d/ 进行管理，为确保生效，执行：
+echo "* soft nofile unlimited" | sudo tee -a /etc/security/limits.d/custom_limits.conf
+echo "* hard nofile unlimited" | sudo tee -a /etc/security/limits.d/custom_limits.conf
+
+# Ubuntu 现代版本（使用 systemd）需要修改 system.conf 和 user.conf
+vim /etc/systemd/system.conf
+DefaultLimitNOFILE=infinity
+DefaultLimitNOFILESoft=infinity
+
+vim /etc/systemd/user.conf
+DefaultLimitNOFILE=infinity
+DefaultLimitNOFILESoft=infinity
+
+# 编辑 PAM 配置 添加：
+vim /etc/pam.d/common-session
+session required pam_limits.so
+
+vim /etc/pam.d/common-session-noninteractive
+session required pam_limits.so
 ```
 
 #### 固定IP配置
@@ -61,44 +140,6 @@ network:
      nameservers:
          addresses: [8.8.8.8,8.8.8.4]
 sudo netplan apply
-```
-
-#### 配置密钥登录
-
-建议配置密钥登录，禁止使用密码登录
-
-```bash
-# 如果没有密钥对，生成密钥对，注意下载好私钥
-ssh-keyge
-# 安装密钥对
-cd ～/.ssh
-cat id_rsa.pub >> authorized_keys
-chmod 600 authorized_keys
-chmod 700 ~/.ssh
-# 设置 SSH，打开密钥登录功能
-vim /etc/ssh/sshd_config
-RSAAuthentication yes
-PubkeyAuthentication yes
-# 禁用密码登录
-PasswordAuthentication no
-```
-
-#### 禁止 root 远程登录
-
-推荐禁止 root 远程登录，使用自己的用户名进行登录
-
-```bash
-# 禁止 root 远程登录
-vim /etc/ssh/sshd_config
-PermitRootLogin no
-```
-
-#### 重启 SSH
-
-修改配置后需要重启 SSH 服务
-
-```bash
-service sshd restart
 ```
 
 ### Docker 安装
