@@ -57,6 +57,18 @@ echo $(curl -s "https://cdn.renfei.net/public/ssh/id_rsa.pub") >> ~/.ssh/authori
 chmod 600 ~/.ssh/authorized_keys;
 ```
 
+### 设置备份用户
+
+```bash
+# 添加用户
+sudo adduser backup_user
+# 限制登录
+sudo usermod -s /usr/sbin/nologin backup_user
+# 编辑Key
+vim /home/backup_user/.ssh/authorized_keys
+command="/bin/false",no-agent-forwarding,no-port-forwarding,no-pty,no-user-rc,no-X11-forwarding ssh-rsa AAAAB3Nza...（用户公钥）
+```
+
 #### 配置 SWAP
 
 ```bash
