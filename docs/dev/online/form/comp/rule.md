@@ -14,7 +14,7 @@
 
 在 ```页面属性``` 中，倒数第二列就是```填值规则```的输入框。
 
-![screenshot_1652879229703-4352d86629f4ba963e200fae82a99474.png](/img/user/admin/online/form/comp/screenshot_1652879229703-4352d86629f4ba963e200fae82a99474.png)
+![screenshot_1652879229703-4352d86629f4ba963e200fae82a99474.png](/img/dev/online/form/comp/screenshot_1652879229703-4352d86629f4ba963e200fae82a99474.png)
 
 输入框里填写的是填值规则的```规则Code```
 
@@ -32,7 +32,7 @@
 
 JS增强参考 online基础篇-JS增强(表单渲染)
 
-![screenshot_1652879260757-aadac1e76d94e19a9ced9f0cc9691c03.png](/img/user/admin/online/form/comp/screenshot_1652879260757-aadac1e76d94e19a9ced9f0cc9691c03.png)
+![screenshot_1652879260757-aadac1e76d94e19a9ced9f0cc9691c03.png](/img/dev/online/form/comp/screenshot_1652879260757-aadac1e76d94e19a9ced9f0cc9691c03.png)
 
 如上图，我的```order_rule```字段设置了填值规则，我想实现当```name```字段变化时重新生成填值规则，JS增强该如何编写呢？
 
@@ -40,13 +40,13 @@ JS增强参考 online基础篇-JS增强(表单渲染)
 
 在Online表单开发页面，选中你要修改JS增强的那一条数据，并点击上方的JS增强按钮
 
-![screenshot_1652879279060-4f873d971abf28fee0e211dbae3363f2.png](/img/user/admin/online/form/comp/screenshot_1652879279060-4f873d971abf28fee0e211dbae3363f2.png)
+![screenshot_1652879279060-4f873d971abf28fee0e211dbae3363f2.png](/img/dev/online/form/comp/screenshot_1652879279060-4f873d971abf28fee0e211dbae3363f2.png)
 
 #### 第二步
 
 ##### 主表JS增强写法
 
-![screenshot_1652879289901-eb535bbd8069cf6e7cbeba539197a0cd.png](/img/user/admin/online/form/comp/screenshot_1652879289901-eb535bbd8069cf6e7cbeba539197a0cd.png)
+![screenshot_1652879289901-eb535bbd8069cf6e7cbeba539197a0cd.png](/img/dev/online/form/comp/screenshot_1652879289901-eb535bbd8069cf6e7cbeba539197a0cd.png)
 
 ```js
  onlChange(){
@@ -64,7 +64,7 @@ JS增强参考 online基础篇-JS增强(表单渲染)
 子表的JS增强也写在主表里！
 :::
 
-![screenshot_1652879301717-1e831972a18858da88432e47160ab850.png](/img/user/admin/online/form/comp/screenshot_1652879301717-1e831972a18858da88432e47160ab850.png)
+![screenshot_1652879301717-1e831972a18858da88432e47160ab850.png](/img/dev/online/form/comp/screenshot_1652879301717-1e831972a18858da88432e47160ab850.png)
 
 ```js
 test_fill_rule_sub_onlChange(){
@@ -87,6 +87,6 @@ test_fill_rule_sub_onlChange(){
 
 > 参考：```${填值规则编码?onl_watch=字段1,字段2}```
 
-![image_1727668747769-0150d38a2a72fc604937071a9e5eece0.png](/img/user/admin/online/form/comp/image_1727668747769-0150d38a2a72fc604937071a9e5eece0.png)
+![image_1727668747769-0150d38a2a72fc604937071a9e5eece0.png](/img/dev/online/form/comp/image_1727668747769-0150d38a2a72fc604937071a9e5eece0.png)
 
 > 当然，除了```onl_watch```之外，你还可以写其他任意参数，会一并传到后台，前提是在编码规则中提前定义好参数，才会解析并覆盖。

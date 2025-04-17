@@ -63,84 +63,6 @@ module.exports = {
                         collapsable: false,
                         sidebarDepth: 0,
                         children: [
-                            {
-                                title: '在线开发手册',
-                                path: '/user/admin/online/',
-                                collapsable: false,
-                                sidebarDepth: 0,
-                                children: [
-                                    '/user/admin/online/enhance/button',
-                                    {
-                                        title: '在线表单',
-                                        path: '/user/admin/online/form/',
-                                        collapsable: false,
-                                        sidebarDepth: 0,
-                                        children: [
-                                            '/user/admin/online/form/comp/',
-                                            '/user/admin/online/form/comp/rule',
-                                            '/user/admin/online/form/comp/expression',
-                                        ]
-                                    },
-                                    {
-                                        title: 'JS增强',
-                                        path: '/user/admin/online/enhance/js/',
-                                        collapsable: false,
-                                        sidebarDepth: 0,
-                                        children: [
-                                            '/user/admin/online/enhance/js/button',
-                                            {
-                                                title: '列表',
-                                                path: '/user/admin/online/enhance/js/list/',
-                                                collapsable: false,
-                                                sidebarDepth: 0,
-                                                children: [
-                                                    '/user/admin/online/enhance/js/list/listBefore',
-                                                ]
-                                            },
-                                            {
-                                                title: '表单',
-                                                path: '/user/admin/online/enhance/js/form/',
-                                                collapsable: false,
-                                                sidebarDepth: 0,
-                                                children: [
-                                                    '/user/admin/online/enhance/js/form/loaded',
-                                                    '/user/admin/online/enhance/js/form/beforeSubmit',
-                                                    '/user/admin/online/enhance/js/form/onlChange',
-                                                    '/user/admin/online/enhance/js/form/subtable',
-                                                    '/user/admin/online/enhance/js/form/subchangemain',
-                                                    '/user/admin/online/enhance/js/form/fieldHiddenOrFileDisabled',
-                                                    '/user/admin/online/enhance/js/form/liandong',
-                                                    '/user/admin/online/enhance/js/form/selecttree',
-                                                    '/user/admin/online/enhance/js/form/hookSetup',
-                                                    '/user/admin/online/enhance/js/form/api',
-                                                ]
-                                            },
-                                            '/user/admin/online/enhance/js/pop',
-                                            '/user/admin/online/enhance/js/http',
-                                            '/user/admin/online/enhance/js/detailModal',
-                                            '/user/admin/online/enhance/js/systemVariables',
-                                        ]
-                                    },
-                                    // {
-                                    //     title: 'JAVA增强',
-                                    //     path: '/user/admin/online/enhance/java/',
-                                    //     collapsable: false,
-                                    //     sidebarDepth: 0,
-                                    //     children: [
-                                    //         '/user/admin/online/enhance/java/import',
-                                    //         '/user/admin/online/enhance/java/export',
-                                    //         '/user/admin/online/enhance/java/query',
-                                    //         '/user/admin/online/enhance/java/api',
-                                    //     ]
-                                    // },
-                                    {
-                                        title: 'SQL增强',
-                                        path: '/user/admin/online/enhance/sql/',
-                                        collapsable: false,
-                                        sidebarDepth: 0,
-                                    }
-                                ]
-                            }
                         ]
                     }
                 ]
@@ -185,6 +107,84 @@ module.exports = {
                         collapsable: false,
                         sidebarDepth: 0,
                     },
+                    {
+                        title: '在线开发手册',
+                        path: '/dev/online/',
+                        collapsable: false,
+                        sidebarDepth: 0,
+                        children: [
+                            '/dev/online/enhance/button',
+                            {
+                                title: '在线表单',
+                                path: '/dev/online/form/',
+                                collapsable: false,
+                                sidebarDepth: 0,
+                                children: [
+                                    '/dev/online/form/comp/',
+                                    '/dev/online/form/comp/rule',
+                                    '/dev/online/form/comp/expression',
+                                ]
+                            },
+                            {
+                                title: 'JS增强',
+                                path: '/dev/online/enhance/js/',
+                                collapsable: false,
+                                sidebarDepth: 0,
+                                children: [
+                                    '/dev/online/enhance/js/button',
+                                    {
+                                        title: '列表',
+                                        path: '/dev/online/enhance/js/list/',
+                                        collapsable: false,
+                                        sidebarDepth: 0,
+                                        children: [
+                                            '/dev/online/enhance/js/list/listBefore',
+                                        ]
+                                    },
+                                    {
+                                        title: '表单',
+                                        path: '/dev/online/enhance/js/form/',
+                                        collapsable: false,
+                                        sidebarDepth: 0,
+                                        children: [
+                                            '/dev/online/enhance/js/form/loaded',
+                                            '/dev/online/enhance/js/form/beforeSubmit',
+                                            '/dev/online/enhance/js/form/onlChange',
+                                            '/dev/online/enhance/js/form/subtable',
+                                            '/dev/online/enhance/js/form/subchangemain',
+                                            '/dev/online/enhance/js/form/fieldHiddenOrFileDisabled',
+                                            '/dev/online/enhance/js/form/liandong',
+                                            '/dev/online/enhance/js/form/selecttree',
+                                            '/dev/online/enhance/js/form/hookSetup',
+                                            '/dev/online/enhance/js/form/api',
+                                        ]
+                                    },
+                                    '/dev/online/enhance/js/pop',
+                                    '/dev/online/enhance/js/http',
+                                    '/dev/online/enhance/js/detailModal',
+                                    '/dev/online/enhance/js/systemVariables',
+                                ]
+                            },
+                            // {
+                            //     title: 'JAVA增强',
+                            //     path: '/dev/online/enhance/java/',
+                            //     collapsable: false,
+                            //     sidebarDepth: 0,
+                            //     children: [
+                            //         '/dev/online/enhance/java/import',
+                            //         '/dev/online/enhance/java/export',
+                            //         '/dev/online/enhance/java/query',
+                            //         '/dev/online/enhance/java/api',
+                            //     ]
+                            // },
+                            {
+                                title: 'SQL增强',
+                                path: '/dev/online/enhance/sql/',
+                                collapsable: false,
+                                sidebarDepth: 0,
+                            }
+                        ]
+                    }
                 ]
             },
             {
