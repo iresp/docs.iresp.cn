@@ -40,8 +40,14 @@ module.exports = {
                         sidebarDepth: 0,
                     },
                     {
-                        title: '项目经理操作手册',
+                        title: '项目经理手册',
                         path: '/user/manager/',
+                        collapsable: false,
+                        sidebarDepth: 0,
+                    },
+                    {
+                        title: '项目成员手册',
+                        path: '/user/member/',
                         collapsable: false,
                         sidebarDepth: 0,
                     },
