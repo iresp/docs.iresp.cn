@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux 服务器运维 | iRESP 文档中心</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="iRESP 文档中心">
+    
+    <link rel="preload" href="/assets/css/0.styles.8f3dca9f.css" as="style"><link rel="preload" href="/assets/js/app.2742ee22.js" as="script"><link rel="preload" href="/assets/js/2.592a6313.js" as="script"><link rel="preload" href="/assets/js/1.47e12c88.js" as="script"><link rel="preload" href="/assets/js/73.b13cd7f7.js" as="script"><link rel="prefetch" href="/assets/js/10.fde088a2.js"><link rel="prefetch" href="/assets/js/11.c62b6b34.js"><link rel="prefetch" href="/assets/js/12.27d4f152.js"><link rel="prefetch" href="/assets/js/13.419d7748.js"><link rel="prefetch" href="/assets/js/14.eb7a3d07.js"><link rel="prefetch" href="/assets/js/15.114dfd5c.js"><link rel="prefetch" href="/assets/js/16.85253907.js"><link rel="prefetch" href="/assets/js/17.c2838453.js"><link rel="prefetch" href="/assets/js/18.3256f17f.js"><link rel="prefetch" href="/assets/js/19.d8afd0ae.js"><link rel="prefetch" href="/assets/js/20.0d880388.js"><link rel="prefetch" href="/assets/js/21.33b300c9.js"><link rel="prefetch" href="/assets/js/22.19e1add4.js"><link rel="prefetch" href="/assets/js/23.15f08e01.js"><link rel="prefetch" href="/assets/js/24.1db0f038.js"><link rel="prefetch" href="/assets/js/25.da9f1b22.js"><link rel="prefetch" href="/assets/js/26.4dc12866.js"><link rel="prefetch" href="/assets/js/27.4b7313d6.js"><link rel="prefetch" href="/assets/js/28.3e645b52.js"><link rel="prefetch" href="/assets/js/29.fa362ded.js"><link rel="prefetch" href="/assets/js/3.af33e5d6.js"><link rel="prefetch" href="/assets/js/30.02f1cf52.js"><link rel="prefetch" href="/assets/js/31.0e251a74.js"><link rel="prefetch" href="/assets/js/32.fc979b54.js"><link rel="prefetch" href="/assets/js/33.1bd0a6ac.js"><link rel="prefetch" href="/assets/js/34.86ad1476.js"><link rel="prefetch" href="/assets/js/35.cba147f7.js"><link rel="prefetch" href="/assets/js/36.34c560ae.js"><link rel="prefetch" href="/assets/js/37.c96ccbdb.js"><link rel="prefetch" href="/assets/js/38.d1bd5c1d.js"><link rel="prefetch" href="/assets/js/39.e1b6a53e.js"><link rel="prefetch" href="/assets/js/4.0a92875f.js"><link rel="prefetch" href="/assets/js/40.334c8d85.js"><link rel="prefetch" href="/assets/js/41.d7e1f03f.js"><link rel="prefetch" href="/assets/js/42.0c3cce82.js"><link rel="prefetch" href="/assets/js/43.ecd1e90c.js"><link rel="prefetch" href="/assets/js/44.552c7dc1.js"><link rel="prefetch" href="/assets/js/45.132f97ff.js"><link rel="prefetch" href="/assets/js/46.2b2b91d3.js"><link rel="prefetch" href="/assets/js/47.34f22db8.js"><link rel="prefetch" href="/assets/js/48.7780085f.js"><link rel="prefetch" href="/assets/js/49.7f563df3.js"><link rel="prefetch" href="/assets/js/5.3b9be48d.js"><link rel="prefetch" href="/assets/js/50.c9d0517b.js"><link rel="prefetch" href="/assets/js/51.ccf3cae4.js"><link rel="prefetch" href="/assets/js/52.a2c26789.js"><link rel="prefetch" href="/assets/js/53.7278fa62.js"><link rel="prefetch" href="/assets/js/54.9c68cd17.js"><link rel="prefetch" href="/assets/js/55.ebc851c3.js"><link rel="prefetch" href="/assets/js/56.cd625889.js"><link rel="prefetch" href="/assets/js/57.edbb02ec.js"><link rel="prefetch" href="/assets/js/58.fb60006a.js"><link rel="prefetch" href="/assets/js/59.d16c778a.js"><link rel="prefetch" href="/assets/js/6.7b96ebf4.js"><link rel="prefetch" href="/assets/js/60.6efdffc3.js"><link rel="prefetch" href="/assets/js/61.18353ec9.js"><link rel="prefetch" href="/assets/js/62.54e64313.js"><link rel="prefetch" href="/assets/js/63.a7a5d03c.js"><link rel="prefetch" href="/assets/js/64.23c53f40.js"><link rel="prefetch" href="/assets/js/65.268bcfb7.js"><link rel="prefetch" href="/assets/js/66.59e159d0.js"><link rel="prefetch" href="/assets/js/67.e121244e.js"><link rel="prefetch" href="/assets/js/68.3ec160bb.js"><link rel="prefetch" href="/assets/js/69.73871605.js"><link rel="prefetch" href="/assets/js/7.7e58b9c4.js"><link rel="prefetch" href="/assets/js/70.ad982926.js"><link rel="prefetch" href="/assets/js/71.864840dd.js"><link rel="prefetch" href="/assets/js/72.325558c2.js"><link rel="prefetch" href="/assets/js/74.35d497a7.js"><link rel="prefetch" href="/assets/js/75.612717da.js"><link rel="prefetch" href="/assets/js/76.f4c02d19.js"><link rel="prefetch" href="/assets/js/77.e5e3b30c.js"><link rel="prefetch" href="/assets/js/78.66f92d73.js"><link rel="prefetch" href="/assets/js/79.5e565e9d.js"><link rel="prefetch" href="/assets/js/80.654d6585.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.2493936b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8f3dca9f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/iresp_logo.svg" alt="iRESP 文档中心" class="logo"> <span class="site-name can-hide">iRESP 文档中心</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/user/" class="nav-link">
+  手册
+</a></div><div class="nav-item"><a href="/dev/" class="nav-link">
+  开发
+</a></div><div class="nav-item"><a href="/ops/" class="nav-link router-link-active">
+  运维
+</a></div><div class="nav-item"><a href="https://www.iresp.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/iresp/docs.iresp.cn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/user/" class="nav-link">
+  手册
+</a></div><div class="nav-item"><a href="/dev/" class="nav-link">
+  开发
+</a></div><div class="nav-item"><a href="/ops/" class="nav-link router-link-active">
+  运维
+</a></div><div class="nav-item"><a href="https://www.iresp.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/iresp/docs.iresp.cn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/user/" class="sidebar-heading clickable"><span>用户手册</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/user/general/" class="sidebar-link">通用操作手册</a></li><li><a href="/user/manager/" class="sidebar-link">项目经理手册</a></li><li><a href="/user/member/" class="sidebar-link">项目成员手册</a></li><li><a href="/user/leader/" class="sidebar-link">高层领导手册</a></li><li><a href="/user/admin/" class="sidebar-link">管理员手册</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/dev/" class="sidebar-heading clickable"><span>开发手册</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><a href="/dev/devices/" class="sidebar-heading clickable open"><span>设备说明</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/devices/ecs.html" class="sidebar-link">Aliyun ECS</a></li><li><a href="/dev/devices/workstation.html" class="sidebar-link">Workstation</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><a href="/dev/backend/" class="sidebar-heading clickable"><span>后端开发</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/backend/CAS.html" class="sidebar-link">Central Authentication Service (CAS)</a></li><li><a href="/dev/backend/CAS-ADFS.html" class="sidebar-link">Central Authentication Service (CAS) - ADFS集成配置</a></li><li><a href="/dev/backend/kkFileView.html" class="sidebar-link">kkFileView</a></li><li><a href="/dev/backend/Sharding.html" class="sidebar-link">ShardingSphere (数据库分库分表和优化)</a></li></ul></section></li><li><a href="/dev/frontend/" class="sidebar-link">前端开发</a></li><li><a href="/dev/app/" class="sidebar-link">移动端开发</a></li><li><section class="sidebar-group is-sub-group depth-1"><a href="/dev/online/" class="sidebar-heading clickable"><span>在线开发手册</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/online/enhance/button.html" class="sidebar-link">自定义按钮</a></li><li><section class="sidebar-group is-sub-group depth-2"><a href="/dev/online/form/" class="sidebar-heading clickable"><span>在线表单</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/online/form/comp/" class="sidebar-link">表单控件配置</a></li><li><a href="/dev/online/form/comp/rule.html" class="sidebar-link">默认值(填值规则)</a></li><li><a href="/dev/online/form/comp/expression.html" class="sidebar-link">默认值表达式</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-2"><a href="/dev/online/enhance/js/" class="sidebar-heading clickable"><span>JS增强</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/online/enhance/js/button.html" class="sidebar-link">自定义按钮触发JS增强</a></li><li><section class="sidebar-group is-sub-group depth-3"><a href="/dev/online/enhance/js/list/" class="sidebar-heading clickable"><span>列表</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/online/enhance/js/list/listBefore.html" class="sidebar-link">列操作前置事件</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-3"><a href="/dev/online/enhance/js/form/" class="sidebar-heading clickable"><span>表单</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/online/enhance/js/form/loaded.html" class="sidebar-link">表单加载事件</a></li><li><a href="/dev/online/enhance/js/form/beforeSubmit.html" class="sidebar-link">提交前置事件</a></li><li><a href="/dev/online/enhance/js/form/onlChange.html" class="sidebar-link">表单值改变事件</a></li><li><a href="/dev/online/enhance/js/form/subtable.html" class="sidebar-link">子表单值改变事件</a></li><li><a href="/dev/online/enhance/js/form/subchangemain.html" class="sidebar-link">子改主单值改变事件</a></li><li><a href="/dev/online/enhance/js/form/fieldHiddenOrFileDisabled.html" class="sidebar-link">字段显隐与禁用</a></li><li><a href="/dev/online/enhance/js/form/liandong.html" class="sidebar-link">JS实现下拉联动</a></li><li><a href="/dev/online/enhance/js/form/selecttree.html" class="sidebar-link">JS控制下拉树数据</a></li><li><a href="/dev/online/enhance/js/form/hookSetup.html" class="sidebar-link">JS增强hook写法之定义setup</a></li><li><a href="/dev/online/enhance/js/form/api.html" class="sidebar-link">Online表单API接口</a></li></ul></section></li><li><a href="/dev/online/enhance/js/pop.html" class="sidebar-link">JS增强触发弹窗</a></li><li><a href="/dev/online/enhance/js/http.html" class="sidebar-link">JS增强 http请求</a></li><li><a href="/dev/online/enhance/js/detailModal.html" class="sidebar-link">弹窗js增强</a></li><li><a href="/dev/online/enhance/js/systemVariables.html" class="sidebar-link">使用系统变量</a></li></ul></section></li><li><a href="/dev/online/enhance/sql/" class="sidebar-link">SQL增强</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/ops/" class="sidebar-heading clickable router-link-active open"><span>运维手册</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><a href="/ops/database" class="sidebar-heading clickable"><span>数据库运维手册</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/ops/database/mariadb.html" class="sidebar-link">MariaDB</a></li><li><a href="/ops/database/dameng.html" class="sidebar-link">武汉达梦数据库</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><a href="/ops/server" class="sidebar-heading clickable router-link-active open"><span>服务器运维手册</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/ops/server/docker.html" class="sidebar-link">Docker 运维</a></li><li><a href="/ops/server/linux.html" aria-current="page" class="active sidebar-link">Linux 服务器运维</a></li><li><a href="/ops/server/windows.html" class="sidebar-link">Windows 服务器运维</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux-服务器运维"><a href="#linux-服务器运维" class="header-anchor">#</a> Linux 服务器运维</h1> <h2 id="ubuntu"><a href="#ubuntu" class="header-anchor">#</a> Ubuntu</h2> <p>下载系统：<a href="https://ubuntu.com/download/server" target="_blank" rel="noopener noreferrer">https://ubuntu.com/download/server<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="初始化配置"><a href="#初始化配置" class="header-anchor">#</a> 初始化配置</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 设置阿里云源（可选：根据不用云厂商进行设置）</span>
+<span class="token function">cp</span> /etc/apt/sources.list /etc/apt/sources.list.bak
+<span class="token function">vim</span> /etc/apt/sources.list
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+<span class="token comment">#deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse</span>
+<span class="token comment">#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse</span>
+<span class="token comment">#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse</span>
+<span class="token comment">#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse</span>
+<span class="token comment">#deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse</span>
+<span class="token comment"># 更新系统</span>
+<span class="token function">apt</span> update
+<span class="token comment"># 如果签名报错，请执行：</span>
+<span class="token function">sudo</span> apt-key adv <span class="token parameter variable">--keyserver</span> keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+<span class="token function">apt</span> upgrade
+<span class="token comment"># 添加用户</span>
+<span class="token function">sudo</span> adduser renfei
+<span class="token comment"># 添加sudo权限</span>
+<span class="token function">sudo</span> <span class="token function">usermod</span> <span class="token parameter variable">-G</span> <span class="token function">sudo</span> renfei
+
+<span class="token function">vim</span> /etc/ssh/sshd_config
+<span class="token comment"># 配置禁止密码登录</span>
+PasswordAuthentication no
+<span class="token comment"># 禁止 root 远程登录</span>
+PermitRootLogin no
+<span class="token comment"># 允许 SSH 仅使用密钥认证</span>
+PubkeyAuthentication <span class="token function">yes</span>
+<span class="token comment"># SSH 保持连接</span>
+ClientAliveInterval <span class="token number">60</span>
+ClientAliveCountMax <span class="token number">1</span>
+<span class="token comment"># 重启 SSH 服务</span>
+systemctl restart <span class="token function">ssh</span>
+</code></pre></div><p>设置密钥，请上传自己的密钥：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 自动设置密钥</span>
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://cdn.renfei.net/public/ssh/sshkey.sh <span class="token operator">|</span> <span class="token function">sh</span>
+
+<span class="token comment"># 手动设置密钥</span>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/.ssh<span class="token punctuation">;</span>
+<span class="token function">chmod</span> <span class="token number">700</span> ~/.ssh<span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token string">&quot;https://cdn.renfei.net/public/ssh/id_rsa.pub&quot;</span><span class="token variable">)</span></span> <span class="token operator">&gt;&gt;</span> ~/.ssh/authorized_keys<span class="token punctuation">;</span>
+<span class="token function">chmod</span> <span class="token number">600</span> ~/.ssh/authorized_keys<span class="token punctuation">;</span>
+</code></pre></div><h3 id="设置备份用户"><a href="#设置备份用户" class="header-anchor">#</a> 设置备份用户</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 添加用户</span>
+<span class="token function">sudo</span> adduser backup_user
+<span class="token comment"># 限制登录</span>
+<span class="token function">sudo</span> <span class="token function">usermod</span> <span class="token parameter variable">-s</span> /usr/sbin/nologin backup_user
+<span class="token comment"># 编辑Key</span>
+<span class="token function">vim</span> /home/backup_user/.ssh/authorized_keys
+<span class="token assign-left variable">command</span><span class="token operator">=</span><span class="token string">&quot;/bin/false&quot;</span>,no-agent-forwarding,no-port-forwarding,no-pty,no-user-rc,no-X11-forwarding ssh-rsa AAAAB3Nza<span class="token punctuation">..</span>.（用户公钥）
+</code></pre></div><h4 id="配置-swap"><a href="#配置-swap" class="header-anchor">#</a> 配置 SWAP</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看当前 Swap 状态</span>
+<span class="token function">swapon</span> <span class="token parameter variable">--show</span>
+<span class="token function">free</span> <span class="token parameter variable">-h</span>
+<span class="token comment"># 创建 Swap 文件</span>
+<span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/zero <span class="token assign-left variable">of</span><span class="token operator">=</span>/swap <span class="token assign-left variable">bs</span><span class="token operator">=</span>1M <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">4096</span>
+<span class="token comment"># 设置权限</span>
+<span class="token function">chmod</span> <span class="token number">600</span> /swap
+
+<span class="token comment"># 格式化为 Swap 格式</span>
+<span class="token function">mkswap</span> /swap
+
+<span class="token comment"># 启用 Swap</span>
+<span class="token function">swapon</span> /swap
+
+<span class="token comment"># 开机自动挂载 Swap</span>
+<span class="token function">vim</span> /etc/fstab
+/swap none swap sw <span class="token number">0</span> <span class="token number">0</span>
+
+<span class="token comment"># 调整 Swap 相关参数</span>
+<span class="token comment"># 云服务器磁盘性能较差，建议尽量减少 Swap 使用</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;vm.swappiness=10&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> <span class="token parameter variable">-a</span> /etc/sysctl.conf
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;vm.vfs_cache_pressure=50&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> <span class="token parameter variable">-a</span> /etc/sysctl.conf
+<span class="token function">sudo</span> <span class="token function">sysctl</span> <span class="token parameter variable">-p</span>
+</code></pre></div><h4 id="调整最大文件打开数"><a href="#调整最大文件打开数" class="header-anchor">#</a> 调整最大文件打开数</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 允许所有用户无限制文件打开数</span>
+<span class="token function">vim</span> /etc/security/limits.conf
+* soft nofile unlimited
+* hard nofile unlimited
+
+<span class="token comment"># 有些 Ubuntu 版本使用 /etc/security/limits.d/ 进行管理，为确保生效，执行：</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* soft nofile unlimited&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> <span class="token parameter variable">-a</span> /etc/security/limits.d/custom_limits.conf
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;* hard nofile unlimited&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> <span class="token parameter variable">-a</span> /etc/security/limits.d/custom_limits.conf
+
+<span class="token comment"># Ubuntu 现代版本（使用 systemd）需要修改 system.conf 和 user.conf</span>
+<span class="token function">vim</span> /etc/systemd/system.conf
+<span class="token assign-left variable">DefaultLimitNOFILE</span><span class="token operator">=</span>infinity
+<span class="token assign-left variable">DefaultLimitNOFILESoft</span><span class="token operator">=</span>infinity
+
+<span class="token function">vim</span> /etc/systemd/user.conf
+<span class="token assign-left variable">DefaultLimitNOFILE</span><span class="token operator">=</span>infinity
+<span class="token assign-left variable">DefaultLimitNOFILESoft</span><span class="token operator">=</span>infinity
+
+<span class="token comment"># 编辑 PAM 配置 添加：</span>
+<span class="token function">vim</span> /etc/pam.d/common-session
+session required pam_limits.so
+
+<span class="token function">vim</span> /etc/pam.d/common-session-noninteractive
+session required pam_limits.so
+</code></pre></div><h4 id="固定ip配置"><a href="#固定ip配置" class="header-anchor">#</a> 固定IP配置</h4> <p>Netplan是最新版 Ubuntu 的默认网络管理工具。Netplan 的配置文件使用 YAML 编写，扩展名为.yaml。</p> <blockquote><p>注意：要小心配置文件中的空格，因为它们是语法的一部分。如果缩进不对，文件将无法正常读取。</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看当前网络配置</span>
+<span class="token function">ip</span> a
+<span class="token comment"># 查看上面命令输出的网卡名称，例如：eth0</span>
+<span class="token builtin class-name">cd</span> /etc/netplan
+<span class="token comment"># 查看文件夹下面的文件名称，并编辑</span>
+ll /etc/netplan
+<span class="token comment"># 请编辑你的文件，我这里文件名是例子01-network-manager-all.yaml</span>
+<span class="token function">vim</span> 01-network-manager-all.yaml
+network:
+ version: <span class="token number">2</span>
+ renderer: NetworkManager
+ ethernets:
+   eth0: <span class="token comment">#注意这里改成你自己的网卡名</span>
+     dhcp4: no
+     addresses: <span class="token punctuation">[</span><span class="token number">172.23</span>.207.254/20<span class="token punctuation">]</span>
+     gateway4: <span class="token number">192.168</span>.1.1
+     nameservers:
+         addresses: <span class="token punctuation">[</span><span class="token number">8.8</span>.8.8,8.8.8.4<span class="token punctuation">]</span>
+<span class="token function">sudo</span> netplan apply
+</code></pre></div><h3 id="docker-安装"><a href="#docker-安装" class="header-anchor">#</a> Docker 安装</h3> <h4 id="在线安装"><a href="#在线安装" class="header-anchor">#</a> 在线安装</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># Add Docker's official GPG key:</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span>
+<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings
+<span class="token function">sudo</span> <span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.asc
+<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.asc
+
+<span class="token comment"># Add the repository to Apt sources:</span>
+<span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>
+  <span class="token string">&quot;deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$VERSION_CODENAME</span>&quot;</span><span class="token variable">)</span></span> stable&quot;</span> <span class="token operator">|</span> <span class="token punctuation">\</span>
+  <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">&gt;</span> /dev/null
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt</span> update
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+</code></pre></div><h4 id="离线安装"><a href="#离线安装" class="header-anchor">#</a> 离线安装</h4> <ul><li>Go to <a href="https://download.docker.com/linux/ubuntu/dists/" target="_blank" rel="noopener noreferrer">https://download.docker.com/linux/ubuntu/dists/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Select your Ubuntu version in the list.</li> <li>Go to pool/stable/ and select the applicable architecture (amd64, armhf, arm64, or s390x).</li> <li>Download the following deb files for the Docker Engine, CLI, containerd, and Docker Compose packages:
+<ul><li>containerd.io_<code>&lt;version&gt;</code>_<code>&lt;arch&gt;</code>.deb</li> <li>docker-ce_<code>&lt;version&gt;</code>_<code>&lt;arch&gt;</code>.deb</li> <li>docker-ce-cli_<code>&lt;version&gt;</code>_<code>&lt;arch&gt;</code>.deb</li> <li>docker-buildx-plugin_<code>&lt;version&gt;</code>_<code>&lt;arch&gt;</code>.deb</li> <li>docker-compose-plugin_<code>&lt;version&gt;</code>_<code>&lt;arch&gt;</code>.deb</li></ul></li> <li>Install the .deb packages. Update the paths in the following example to where you downloaded the Docker packages.</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> ./containerd.io_<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>_<span class="token operator">&lt;</span>arch<span class="token operator">&gt;</span>.deb <span class="token punctuation">\</span>
+  ./docker-ce_<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>_<span class="token operator">&lt;</span>arch<span class="token operator">&gt;</span>.deb <span class="token punctuation">\</span>
+  ./docker-ce-cli_<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>_<span class="token operator">&lt;</span>arch<span class="token operator">&gt;</span>.deb <span class="token punctuation">\</span>
+  ./docker-buildx-plugin_<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>_<span class="token operator">&lt;</span>arch<span class="token operator">&gt;</span>.deb <span class="token punctuation">\</span>
+  ./docker-compose-plugin_<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>_<span class="token operator">&lt;</span>arch<span class="token operator">&gt;</span>.deb
+</code></pre></div><ul><li>Verify that the installation is successful by running the hello-world image:</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> start
+<span class="token function">sudo</span> <span class="token function">docker</span> run hello-world
+</code></pre></div><h4 id="portainer-ce-安装"><a href="#portainer-ce-安装" class="header-anchor">#</a> Portainer CE 安装</h4> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> pull portainer/portainer-ce:2.21.4
+<span class="token function">docker</span> volume create portainer_data
+<span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">-p</span> <span class="token number">8000</span>:8000 <span class="token parameter variable">-p</span> <span class="token number">9443</span>:9443 <span class="token parameter variable">--name</span> portainer <span class="token parameter variable">--restart</span><span class="token operator">=</span>always <span class="token parameter variable">-v</span> /var/run/docker.sock:/var/run/docker.sock <span class="token parameter variable">-v</span> portainer_data:/data portainer/portainer-ce:2.21.4
+</code></pre></div><p>登录：<a href="https://localhost:9443" target="_blank" rel="noopener noreferrer">https://localhost:9443<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="jdk-安装"><a href="#jdk-安装" class="header-anchor">#</a> JDK 安装</h3> <p>下载对应的版本：<a href="https://adoptium.net/zh-CN/temurin/releases/" target="_blank" rel="noopener noreferrer">https://adoptium.net/zh-CN/temurin/releases/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/iresp/docs.iresp.cn/edit/master/docs/ops/server/linux.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ops/server/docker.html" class="prev">
+        Docker 运维
+      </a></span> <span class="next"><a href="/ops/server/windows.html">
+        Windows 服务器运维
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2742ee22.js" defer></script><script src="/assets/js/2.592a6313.js" defer></script><script src="/assets/js/1.47e12c88.js" defer></script><script src="/assets/js/73.b13cd7f7.js" defer></script>
+  </body>
+</html>
