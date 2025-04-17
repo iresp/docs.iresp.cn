@@ -34,6 +34,12 @@ module.exports = {
                 sidebarDepth: 0,
                 children: [
                     {
+                        title: '通用操作手册',
+                        path: '/user/general/',
+                        collapsable: false,
+                        sidebarDepth: 0,
+                    },
+                    {
                         title: '管理员手册',
                         path: '/user/admin/',
                         collapsable: false,
