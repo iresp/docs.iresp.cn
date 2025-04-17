@@ -14,7 +14,7 @@ lang: zh-CN
     - 所有用户: [通用操作手册](/user/general/)
     - 项目经理: [项目经理手册](/user/manager/)
     - 项目成员: [项目成员手册](/user/member/)
-    - 高层领导
+    - 高层领导: [高层领导手册](/user/leader/)
     - 直线经理
     - 企业财务
     - 系统管理员: [管理员手册](/user/admin/)

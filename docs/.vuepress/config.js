@@ -52,6 +52,12 @@ module.exports = {
                         sidebarDepth: 0,
                     },
                     {
+                        title: '高层领导手册',
+                        path: '/user/leader/',
+                        collapsable: false,
+                        sidebarDepth: 0,
+                    },
+                    {
                         title: '管理员手册',
                         path: '/user/admin/',
                         collapsable: false,
